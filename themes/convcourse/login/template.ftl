@@ -39,21 +39,6 @@
 
 <body class="${properties.kcBodyClass!}">
 <div class="body-wrapper">
-    <nav class="top-navbar">
-        <div class="nav-brand">
-            <svg class="kc-brand-icon" style="width:24px;height:24px;margin:0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
-            </svg>
-            <#if realm.displayName?has_content>${realm.displayName}<#else>Certified</#if>
-        </div>
-        <div class="nav-links">
-            <a href="#">Solution</a>
-            <a href="#">Use Cases</a>
-            <a href="#">Contact</a>
-        </div>
-        <a href="#" class="nav-btn">Client Login</a>
-    </nav>
-
     <div id="kc-container" class="${properties.kcContainerClass!}">
         <div id="kc-container-wrapper" class="${properties.kcContainerWrapperClass!}">
 
@@ -61,13 +46,13 @@
                 <div id="kc-content-wrapper">
                     
                     <#-- Logo y Brand Outside Form but Inside Wrapper -->
-                    <div id="kc-logo">
-                        <div id="kc-logo-wrapper">
-                            <div class="kc-brand" style="margin-bottom: 0;">
-                                <svg class="kc-brand-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <div id="kc-logo" style="text-align: center; margin-bottom: 2rem;">
+                        <div id="kc-logo-wrapper" style="display: flex; justify-content: center;">
+                            <div class="kc-brand" style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                                <svg class="kc-brand-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #2563eb;">
                                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
                                 </svg>
-                                <h1 id="kc-page-title" style="margin:0;"><#if realm.displayName?has_content>${realm.displayName}<#else>Certified</#if></h1>
+                                <h1 style="font-size: 1.75rem; font-weight: 700; margin: 0; color: #111827;"><#if realm.displayName?has_content>${realm.displayName}<#else>convalid</#if></h1>
                             </div>
                         </div>
                     </div>
