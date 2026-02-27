@@ -91,28 +91,24 @@
                         <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
                             <#if displayRequiredFields>
                                 <div class="${properties.kcContentWrapperClass!}">
-                                    <div class="${properties.kcLabelWrapperClass!} subtitle">
-                                        <span class="subtitle"><span class="required">*</span> ${msg("requiredFields")}</span>
-                                    </div>
+                                    <#-- Removed Required Fields Text Block -->
                                     <div class="col-md-10">
                                         <div style="text-align: center;">
                                             <h2 id="kc-page-title" style="margin-bottom: 0;"><#nested "header"></h2>
-                                            <p class="subtitle" style="margin-top: 5px;">Already have an account?</p>
+                                            <p class="subtitle" style="margin-top: 5px; text-align: center;">Already have an account?</p>
                                         </div>
                                     </div>
                                 </div>
                             <#else>
                                 <div style="text-align: center;">
                                     <h2 id="kc-page-title" style="margin-bottom: 0;"><#nested "header"></h2>
-                                    <p class="subtitle" style="margin-top: 5px;">Already have an account?</p>
+                                    <p class="subtitle" style="margin-top: 5px; text-align: center;">Already have an account?</p>
                                 </div>
                             </#if>
                         <#else>
                             <#if displayRequiredFields>
                                 <div class="${properties.kcContentWrapperClass!}">
-                                    <div class="${properties.kcLabelWrapperClass!} subtitle">
-                                        <span class="subtitle"><span class="required">*</span> ${msg("requiredFields")}</span>
-                                    </div>
+                                    <#-- Removed Required Fields Text Block -->
                                     <div class="col-md-10">
                                         <#nested "show-username">
                                         <div id="kc-username" class="${properties.kcFormGroupClass!}">
