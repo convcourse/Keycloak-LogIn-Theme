@@ -120,9 +120,9 @@ h1#kc-page-title {
     width: 100%;
 }
 
-.register-page #kc-form-wrapper {
+body.register-page #kc-form-wrapper {
     width: 100%;
-    max-width: 800px !important;
+    max-width: 900px !important;
 }
 
 .form-group {
