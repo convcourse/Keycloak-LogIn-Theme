@@ -38,34 +38,41 @@
 </head>
 
 <body class="${properties.kcBodyClass!}">
-<div id="kc-container" class="${properties.kcContainerClass!}">
-    <div id="kc-container-wrapper" class="${properties.kcContainerWrapperClass!}">
+<div class="body-wrapper">
+    <nav class="top-navbar">
+        <div class="nav-brand">
+            <svg class="kc-brand-icon" style="width:24px;height:24px;margin:0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+            </svg>
+            <#if realm.displayName?has_content>${realm.displayName}<#else>Certified</#if>
+        </div>
+        <div class="nav-links">
+            <a href="#">Solution</a>
+            <a href="#">Use Cases</a>
+            <a href="#">Contact</a>
+        </div>
+        <a href="#" class="nav-btn">Client Login</a>
+    </nav>
 
-        <div id="kc-content">
-            <div id="kc-content-wrapper">
-                
-                <#-- Logo y Brand -->
-                <div id="kc-logo">
-                    <div id="kc-logo-wrapper">
-                        <#if realm.displayName?has_content>
-                            <div class="kc-brand">
+    <div id="kc-container" class="${properties.kcContainerClass!}">
+        <div id="kc-container-wrapper" class="${properties.kcContainerWrapperClass!}">
+
+            <div id="kc-content">
+                <div id="kc-content-wrapper">
+                    
+                    <#-- Logo y Brand Outside Form but Inside Wrapper -->
+                    <div id="kc-logo">
+                        <div id="kc-logo-wrapper">
+                            <div class="kc-brand" style="margin-bottom: 0;">
                                 <svg class="kc-brand-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
                                 </svg>
-                                <h1 class="kc-brand-title">${realm.displayName}</h1>
+                                <h1 id="kc-page-title" style="margin:0;"><#if realm.displayName?has_content>${realm.displayName}<#else>Certified</#if></h1>
                             </div>
-                        <#else>
-                            <div class="kc-brand">
-                                <svg class="kc-brand-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
-                                </svg>
-                                <h1 class="kc-brand-title">Convalid</h1>
-                            </div>
-                        </#if>
+                        </div>
                     </div>
-                </div>
 
-                <#-- App-initiated actions should not see warning messages about the need to complete the action -->
+                    <#-- App-initiated actions should not see warning messages about the need to complete the action -->
                 <#-- during login.                                                                               -->
                 <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
                     <div class="alert-${message.type} ${properties.kcAlertClass!} pf-m-<#if message.type = 'error'>danger<#else>${message.type}</#if>">
@@ -103,11 +110,17 @@
                                         <span class="subtitle"><span class="required">*</span> ${msg("requiredFields")}</span>
                                     </div>
                                     <div class="col-md-10">
-                                        <h2 id="kc-page-title"><#nested "header"></h2>
+                                        <div style="text-align: center;">
+                                            <h2 id="kc-page-title" style="margin-bottom: 0;"><#nested "header"></h2>
+                                            <p class="subtitle" style="margin-top: 5px;">Already have an account?</p>
+                                        </div>
                                     </div>
                                 </div>
                             <#else>
-                                <h2 id="kc-page-title"><#nested "header"></h2>
+                                <div style="text-align: center;">
+                                    <h2 id="kc-page-title" style="margin-bottom: 0;"><#nested "header"></h2>
+                                    <p class="subtitle" style="margin-top: 5px;">Already have an account?</p>
+                                </div>
                             </#if>
                         <#else>
                             <#if displayRequiredFields>
@@ -156,18 +169,41 @@
                         </#if>
 
                       <#if displayInfo>
-                          <div id="kc-info" class="${properties.kcSignUpClass!}">
-                              <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
-                                  <#nested "info">
-                              </div>
-                          </div>
+                          <!-- info hidden in form, we show it below outside card -->
                       </#if>
                     </div>
                 </div>
+                
+                <#if displayInfo>
+                    <div id="kc-info" class="${properties.kcSignUpClass!}">
+                        <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!} create-account-wrapper">
+                            <#nested "info">
+                        </div>
+                    </div>
+                </#if>
 
             </div>
         </div>
     </div>
+    
+    <!-- Cookie Banner & Lang Float -->
+    <div class="cookie-banner">
+        <div class="cookie-text">
+            We use cookies to improve your experience on our website and analyze traffic. By clicking "Accept", you accept our use of cookies according to our <a href="#">Privacy Policy</a>.
+        </div>
+        <div class="cookie-actions">
+            <button class="btn-secondary">Reject</button>
+            <button class="btn-accept">Accept</button>
+            <button class="btn-close" style="font-size: 1.5rem; background:none; border:none; cursor:pointer; color: #9ca3af;">&times;</button>
+        </div>
+    </div>
+    
+    <button class="lang-float" style="border:none;">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+    </button>
 </div>
 </body>
 </html>
