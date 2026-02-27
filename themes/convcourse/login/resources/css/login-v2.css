@@ -420,8 +420,9 @@ input[type="checkbox"]:checked::before {
     }
 }
 
-.pf-c-form-control {
+#firstName,#lastName,#email,#username,#password,#password-confirm {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
-
+    padding: 0% !important;
+    margin: 0% !important;
 }
