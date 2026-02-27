@@ -11,7 +11,7 @@ Tema personalizado de Keycloak para el proyecto ConvCourse, diseñado para coinc
 ## 🚀 Instalación
 
 1. Clonar el repositorio
-2. Copiar `.env.example` a `.env` y configurar las credenciales
+2. Editar `.env` y configurar las credenciales si es necesario
 3. Lanzar con Docker Compose:
 
 ```bash

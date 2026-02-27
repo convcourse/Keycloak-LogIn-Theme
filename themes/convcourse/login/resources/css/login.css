@@ -30,68 +30,60 @@
 }
 
 /* Reset and base styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-    background: var(--surface-900);
-    color: var(--surface-300);
+* {
+    box-sizing: border-box;
 }
 
-/* Main login container */
-#kc-container-wrapper {
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
     background: var(--surface-900);
+    color: var(--surface-300);
+    min-height: 100vh;
+}
+
+/* Main container */
+#kc-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#kc-header-wrapper {
-    display: none;
+    padding: 2rem 1rem;
+    background: var(--surface-900);
 }
 
 /* Card container */
-.login-pf-page #kc-form-wrapper,
-.login-pf-page #kc-content-wrapper {
+#kc-content,
+#kc-content-wrapper {
+    width: 100%;
+    max-width: 450px;
+}
+
+#kc-form,
+#kc-form-wrapper {
     background: var(--surface-800);
     border: 1px solid var(--surface-700);
     border-radius: 1rem;
     padding: 3rem 2.5rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-    max-width: 450px;
-    width: 100%;
-    margin: 2rem auto;
-}
-
-#kc-content {
-    background: var(--surface-800);
-    border-radius: 1rem;
-}
-
-.login-pf {
-    background: var(--surface-900);
 }
 
 /* Header */
 #kc-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-#kc-header-wrapper h1 {
-    color: white;
-    font-size: 1.875rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    display: none;
 }
 
 #kc-page-title {
     color: white;
-    font-size: 1.875rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
     text-align: center;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, white 0%, var(--primary-200) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Form elements */
