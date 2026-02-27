@@ -307,22 +307,28 @@ input[type="checkbox"]:checked::before {
     color: var(--text-muted) !important;
 }
 
-.badge {
+.trust-badge {
     display: flex !important;
     align-items: center !important;
     gap: 0.35rem !important;
+    padding: 0.4rem 0.75rem !important;
+    border-radius: 9999px !important;
+    background: #e0f2fe !important;
 }
 
-.badge.safe {
+.trust-badge.safe {
     color: var(--success) !important;
+    background: #d1fae5 !important;
 }
 
-.badge.gdpr {
+.trust-badge.gdpr {
     color: var(--primary) !important;
+    background: #e0f2fe !important;
 }
 
-.badge span {
+.trust-badge span {
     color: var(--text-muted) !important;
+    font-weight: 500 !important;
 }
 
 /* Create Account Link */
@@ -343,72 +349,7 @@ input[type="checkbox"]:checked::before {
     text-decoration: underline !important;
 }
 
-/* Cookie Banner */
-.cookie-banner {
-    position: fixed !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    background: var(--card-bg) !important;
-    padding: 1rem 2rem !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05) !important;
-    font-size: 0.875rem !important;
-    color: var(--text-muted) !important;
-    z-index: 50 !important;
-}
-
-.cookie-text a {
-    color: var(--primary) !important;
-    text-decoration: none !important;
-}
-
-.cookie-actions {
-    display: flex !important;
-    gap: 1rem !important;
-    align-items: center !important;
-}
-
-.btn-secondary {
-    background: transparent !important;
-    border: 1px solid var(--primary) !important;
-    color: var(--primary) !important;
-    padding: 0.5rem 1.5rem !important;
-    border-radius: 0.5rem !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-    transition: all 0.2s !important;
-}
-
-.btn-secondary:hover {
-    background: rgba(37, 99, 235, 0.05) !important;
-}
-
-.btn-accept {
-    background: var(--primary) !important;
-    border: 1px solid var(--primary) !important;
-    color: white !important;
-    padding: 0.5rem 1.5rem !important;
-    border-radius: 0.5rem !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-    transition: background 0.2s !important;
-}
-
-.btn-accept:hover {
-    background: var(--primary-hover) !important;
-}
-
-.btn-close {
-    background: none !important;
-    border: none !important;
-    color: var(--text-light) !important;
-    cursor: pointer !important;
-    font-size: 1.2rem !important;
-    padding: 0.5rem !important;
-}
+/* Cookie Banner block removed */
 
 /* Floating Lang Button */
 .lang-float {

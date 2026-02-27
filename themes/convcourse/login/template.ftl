@@ -171,18 +171,7 @@
         </div>
     </div>
     
-    <!-- Cookie Banner & Lang Float -->
-    <div class="cookie-banner">
-        <div class="cookie-text">
-            We use cookies to improve your experience on our website and analyze traffic. By clicking "Accept", you accept our use of cookies according to our <a href="#">Privacy Policy</a>.
-        </div>
-        <div class="cookie-actions">
-            <button class="btn-secondary">Reject</button>
-            <button class="btn-accept">Accept</button>
-            <button class="btn-close" style="font-size: 1.5rem; background:none; border:none; cursor:pointer; color: #9ca3af;">&times;</button>
-        </div>
-    </div>
-    
+    <!-- Lang Float -->
     <button class="lang-float" style="border:none;">
         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24">
             <circle cx="12" cy="12" r="10"></circle>

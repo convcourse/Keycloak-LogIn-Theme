@@ -74,11 +74,11 @@
                 </div>
                 
                 <div class="trust-badges">
-                    <div class="badge safe">
+                    <div class="trust-badge safe">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                         <span>Conexión segura</span>
                     </div>
-                    <div class="badge gdpr">
+                    <div class="trust-badge gdpr">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                         <span>GDPR compliant</span>
                     </div>
