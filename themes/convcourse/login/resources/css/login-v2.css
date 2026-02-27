@@ -105,7 +105,7 @@ nav.top-navbar {
 
 #kc-content {
     width: 100%;
-    max-width: 520px !important;
+    max-width: 550px !important;
     /* Made wider */
 }
 
@@ -182,7 +182,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"] {
     width: 100% !important;
-    padding: 0.85rem 1rem 0.85rem 2.75rem !important;
+    padding: 0.85rem 1rem 0.85rem 1rem !important;
     border: 1px solid var(--border-color) !important;
     border-radius: 0.5rem !important;
     font-size: 0.95rem !important;
@@ -198,6 +198,13 @@ input[type="password"]:focus,
 input[type="email"]:focus {
     border-color: var(--primary) !important;
     box-shadow: 0 0 0 3px var(--focus-ring) !important;
+}
+
+/* Specific padding for login form inputs that have icons on the left */
+#kc-form-login input[type="text"],
+#kc-form-login input[type="password"],
+#kc-form-login input[type="email"] {
+    padding-left: 2.75rem !important;
 }
 
 /* Form Options */
