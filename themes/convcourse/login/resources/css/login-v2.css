@@ -138,13 +138,17 @@ h1#kc-page-title {
     margin-bottom: 2rem !important;
 }
 
-#kc-form {
+#kc-form,
+#kc-register-form {
     text-align: left;
+    width: 100% !important;
 }
 
 /* Form Groups */
 .form-group {
     margin-bottom: 1.25rem !important;
+    display: block !important;
+    width: 100% !important;
 }
 
 label {

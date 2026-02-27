@@ -11,7 +11,6 @@
                            value="${(register.formData.firstName!'')}"
                            aria-invalid="<#if messagesPerField.existsError('firstName')>true</#if>"
                            autocomplete="given-name"
-                           style="padding-left: 1rem;"
                     />
                 </div>
                 <#if messagesPerField.existsError('firstName')>
@@ -28,7 +27,6 @@
                            value="${(register.formData.lastName!'')}"
                            aria-invalid="<#if messagesPerField.existsError('lastName')>true</#if>"
                            autocomplete="family-name"
-                           style="padding-left: 1rem;"
                     />
                 </div>
                 <#if messagesPerField.existsError('lastName')>
@@ -44,7 +42,6 @@
                     <input type="text" id="email" class="${properties.kcInputClass!}" name="email"
                            value="${(register.formData.email!'')}" autocomplete="email"
                            aria-invalid="<#if messagesPerField.existsError('email')>true</#if>"
-                           style="padding-left: 1rem;"
                     />
                 </div>
                 <#if messagesPerField.existsError('email')>
@@ -61,7 +58,6 @@
                         <input type="text" id="username" class="${properties.kcInputClass!}" name="username"
                                value="${(register.formData.username!'')}" autocomplete="username"
                                aria-invalid="<#if messagesPerField.existsError('username')>true</#if>"
-                               style="padding-left: 1rem;"
                         />
                     </div>
                     <#if messagesPerField.existsError('username')>
@@ -79,7 +75,6 @@
                         <input type="password" id="password" class="${properties.kcInputClass!}" name="password"
                                autocomplete="new-password"
                                aria-invalid="<#if messagesPerField.existsError('password','password-confirm')>true</#if>"
-                               style="padding-left: 1rem;"
                         />
                         <svg class="input-icon right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="const p=document.getElementById('password'); if(p.type==='password'){p.type='text';}else{p.type='password';}">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -100,7 +95,6 @@
                                name="password-confirm"
                                autocomplete="new-password"
                                aria-invalid="<#if messagesPerField.existsError('password-confirm')>true</#if>"
-                               style="padding-left: 1rem;"
                         />
                         <svg class="input-icon right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="const p=document.getElementById('password-confirm'); if(p.type==='password'){p.type='text';}else{p.type='password';}">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
