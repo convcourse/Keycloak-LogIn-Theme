@@ -37,7 +37,6 @@ body {
     padding-bottom: 2rem;
 }
 
-/* Main Layout */
 #kc-container {
     flex: 1;
     display: flex;
@@ -48,14 +47,23 @@ body {
 
 #kc-content {
     width: 100%;
-    max-width: 800px; /* Ancho aumentado para registro más amplio */
+    /* Max width set to 900px specifically for better field visibility */
+    max-width: 900px !important;
 }
 
 #kc-content-wrapper {
     width: 100%;
 }
 
-/* Logo Section */
+#kc-form-wrapper {
+    background: var(--card-bg);
+    border-radius: 1.5rem;
+    padding: 3.5rem;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05), 0 10px 15px -5px rgba(0, 0, 0, 0.02);
+    width: 100%;
+}
+
+/* Header & Logo */
 #kc-logo {
     text-align: center;
     margin-bottom: 2rem;
@@ -81,15 +89,6 @@ body {
     color: var(--text-main);
 }
 
-/* Card Styling */
-#kc-form-wrapper {
-    background: var(--card-bg);
-    border-radius: 1.5rem;
-    padding: 3.5rem;
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05), 0 10px 15px -5px rgba(0, 0, 0, 0.02);
-}
-
-/* Titles */
 h1#kc-page-title {
     font-size: 1.75rem;
     font-weight: 700;
@@ -106,8 +105,8 @@ h1#kc-page-title {
     display: block;
 }
 
-/* Form Elements */
-#kc-form, #kc-register-form {
+/* Forms */
+#kc-form, #kc-register-form, #kc-form-login {
     width: 100%;
 }
 
@@ -127,13 +126,15 @@ label {
 .input-wrapper {
     position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="email"] {
     width: 100%;
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.25rem 1rem 1.25rem; /* Padding más generoso */
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     font-size: 1rem;
@@ -141,7 +142,7 @@ input[type="email"] {
     background: #fff;
     transition: all 0.2s ease;
     outline: none;
-    height: auto;
+    height: 3.5rem; /* Altura explícita para asegurar click target */
 }
 
 input:focus {
@@ -149,7 +150,7 @@ input:focus {
     box-shadow: 0 0 0 4px var(--focus-ring);
 }
 
-/* Icons inside inputs */
+/* Icons */
 .input-icon {
     position: absolute;
     top: 50%;
@@ -157,11 +158,22 @@ input:focus {
     width: 20px;
     height: 20px;
     color: var(--text-light);
+    pointer-events: none;
+    left: 1rem;
+    z-index: 10;
 }
 
+/* Adjustment for inputs with left icons */
+.input-wrapper:has(.input-icon:not(.right)) input {
+    padding-left: 3rem;
+}
+
+/* Right icon (eye) */
 .input-icon.right {
+    left: auto;
     right: 1rem;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 /* Buttons */
@@ -180,6 +192,7 @@ input:focus {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    height: 3.5rem;
 }
 
 .btn-primary:hover {
@@ -199,20 +212,19 @@ a:hover {
     text-decoration: underline;
 }
 
-#kc-form-options {
-    margin-top: 1.5rem;
+.form-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
 }
 
-.create-account-wrapper {
-    text-align: center;
-    margin-top: 2rem;
-    color: var(--text-muted);
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-/* Error messages */
 .input-error-text {
     display: block;
     margin-top: 0.5rem;
@@ -224,23 +236,42 @@ input[aria-invalid="true"] {
     border-color: var(--error);
 }
 
-/* Responsive */
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 9999px;
+    background: #e0f2fe;
+}
+
+.trust-badge.safe {
+    color: var(--success);
+    background: #d1fae5;
+}
+
+.trust-badge.gdpr {
+    color: var(--primary);
+    background: #e0f2fe;
+}
+
+#kc-registration {
+    text-align: center;
+    margin-top: 2rem;
+}
+
 @media (max-width: 640px) {
     #kc-form-wrapper {
         padding: 2rem;
-        border-radius: 0;
-        box-shadow: none;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    #kc-content {
-        max-width: 100%;
-    }
-    
-    body {
-        background-color: var(--card-bg);
     }
 }
