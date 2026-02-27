@@ -208,7 +208,7 @@ input[type="email"]:focus {
 #kc-form-login input[type="text"],
 #kc-form-login input[type="password"],
 #kc-form-login input[type="email"] {
-    padding-left: 2.75rem !important;
+    padding-left: 1rem !important;
 }
 
 /* Form Options */
@@ -418,11 +418,4 @@ input[type="checkbox"]:checked::before {
     #kc-content {
         max-width: 100% !important;
     }
-}
-
-#firstName,#lastName,#email,#username,#password,#password-confirm {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    padding: 0% !important;
-    margin: 0% !important;
 }
