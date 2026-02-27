@@ -37,7 +37,6 @@ body {
     padding-bottom: 2rem;
 }
 
-/* Main Container */
 #kc-container {
     flex: 1;
     display: flex;
@@ -48,29 +47,20 @@ body {
 
 #kc-content {
     width: 100%;
-    /* Volviendo al ancho estandar/similar al login si 1000px era excesivo */
-    max-width: 550px !important; 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    /* Max width set to 900px specifically for better field visibility */
+    max-width: 900px !important;
 }
 
 #kc-content-wrapper {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 #kc-form-wrapper {
     background: var(--card-bg);
     border-radius: 1.5rem;
-    padding: 3rem; 
+    padding: 3.5rem;
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05), 0 10px 15px -5px rgba(0, 0, 0, 0.02);
     width: 100%;
-    max-width: 550px !important;
 }
 
 /* Header & Logo */
@@ -118,11 +108,6 @@ h1#kc-page-title {
 /* Forms */
 #kc-form, #kc-register-form, #kc-form-login {
     width: 100%;
-}
-
-#kc-form-wrapper {
-    width: 100%;
-    max-width: 550px !important;
 }
 
 .form-group {
