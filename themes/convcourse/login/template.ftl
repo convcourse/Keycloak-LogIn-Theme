@@ -100,9 +100,11 @@
                                     </div>
                                 </div>
                             <#else>
-                                <div style="text-align: center; width: 100%;">
-                                    <h2 id="kc-page-title" style="margin-bottom: 0;"><#nested "header"></h2>
-                                    <p class="subtitle" style="margin-top: 5px; text-align: center;">Already have an account?</p>
+                                <div class="col-md-10">
+                                    <div style="text-align: center;">
+                                        <h2 id="kc-page-title" style="margin-bottom: 0;"><#nested "header"></h2>
+                                        <p class="subtitle" style="margin-top: 5px;">Already have an account?</p>
+                                    </div>
                                 </div>
                             </#if>
                         <#else>
@@ -123,7 +125,7 @@
                                     </div>
                                 </div>
                             <#else>
-                                <div class="col-md-10" style="width: 100%; max-width: 100%; flex: 0 0 100%;">
+                                <div class="col-md-10">
                                     <#nested "show-username">
                                     <div id="kc-username" class="${properties.kcFormGroupClass!}">
                                         <label id="kc-attempted-username">${auth.attemptedUsername}</label>
