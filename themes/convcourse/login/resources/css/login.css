@@ -482,3 +482,35 @@ input[type="checkbox"]:checked::before {
         padding-bottom: 120px;
     }
 }
+
+/* Register form specific styles */
+#kc-register-form .pf-c-form__group,
+#kc-register-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+/* Back to login link */
+#kc-form-options {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#kc-form-options a {
+    color: var(--surface-400);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#kc-form-options a:hover {
+    color: var(--primary-400);
+}
+
+.subtitle {
+    color: var(--surface-400);
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+}
