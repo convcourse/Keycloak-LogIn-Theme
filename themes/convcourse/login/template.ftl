@@ -92,7 +92,7 @@
                             <#if displayRequiredFields>
                                 <div class="${properties.kcContentWrapperClass!}">
                                     <#-- Removed Required Fields Text Block -->
-                                    <div class="col-md-10">
+                                    <div class="col-md-10" style="width: 100%; max-width: 100%; flex: 0 0 100%;">
                                         <div style="text-align: center;">
                                             <h2 id="kc-page-title" style="margin-bottom: 0;"><#nested "header"></h2>
                                             <p class="subtitle" style="margin-top: 5px; text-align: center;">Already have an account?</p>
@@ -100,7 +100,7 @@
                                     </div>
                                 </div>
                             <#else>
-                                <div style="text-align: center;">
+                                <div style="text-align: center; width: 100%;">
                                     <h2 id="kc-page-title" style="margin-bottom: 0;"><#nested "header"></h2>
                                     <p class="subtitle" style="margin-top: 5px; text-align: center;">Already have an account?</p>
                                 </div>
@@ -109,7 +109,7 @@
                             <#if displayRequiredFields>
                                 <div class="${properties.kcContentWrapperClass!}">
                                     <#-- Removed Required Fields Text Block -->
-                                    <div class="col-md-10">
+                                    <div class="col-md-10" style="width: 100%; max-width: 100%; flex: 0 0 100%;">
                                         <#nested "show-username">
                                         <div id="kc-username" class="${properties.kcFormGroupClass!}">
                                             <label id="kc-attempted-username">${auth.attemptedUsername}</label>
@@ -123,9 +123,10 @@
                                     </div>
                                 </div>
                             <#else>
-                                <#nested "show-username">
-                                <div id="kc-username" class="${properties.kcFormGroupClass!}">
-                                    <label id="kc-attempted-username">${auth.attemptedUsername}</label>
+                                <div class="col-md-10" style="width: 100%; max-width: 100%; flex: 0 0 100%;">
+                                    <#nested "show-username">
+                                    <div id="kc-username" class="${properties.kcFormGroupClass!}">
+                                        <label id="kc-attempted-username">${auth.attemptedUsername}</label>
                                     <a id="reset-login" href="${url.loginRestartFlowUrl}">
                                         <div class="kc-login-tooltip">
                                             <i class="${properties.kcResetFlowIcon!}"></i>
