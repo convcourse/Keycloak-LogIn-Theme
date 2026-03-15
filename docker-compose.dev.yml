@@ -5,16 +5,13 @@ services:
     image: quay.io/keycloak/keycloak:26.5.4
     container_name: keycloak-dev
     restart: unless-stopped
-    ports:
-      - "8080:8080"
+    network_mode: "host"
     environment:
       KC_BOOTSTRAP_ADMIN_USERNAME: ${KC_ADMIN_USERNAME:-admin}
       KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_ADMIN_PASSWORD:-admin}
-      KC_HOSTNAME: localhost
-      KC_PROXY_HEADERS: xforwarded
       KC_HTTP_ENABLED: "true"
+      KC_HOSTNAME: localhost
       KC_HOSTNAME_STRICT: "false"
-      KC_HOSTNAME_STRICT_HTTPS: "false"
     volumes:
       - keycloak_dev_data:/opt/keycloak/data
       - ./themes:/opt/keycloak/themes
